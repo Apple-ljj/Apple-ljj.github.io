@@ -38,6 +38,7 @@ padding:0px;
 </style>
 <body οnlοad="countTime()">
 	<p class="sys"></p>
+	  <div id="time2"></div>
 	  <div id="time"></div>
 	<div id="div">
 		点击返回APP
@@ -185,6 +186,7 @@ function sysTime(){
         dataType:'JSON',
         async:false,
         success:function (res) {
+		$("#time2").html(res);
         	sysTimes=res.sysTime2;
        },
         error:function(err){ 
